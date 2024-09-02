@@ -20,4 +20,9 @@ describe("calculator-string", () => {
     const number = add(str);
     expect(number).toBe(22.7);
   });
+  test("string with new line delimeter inbetween them instead of comma", () => {
+    const str = "1\n2,3";
+    const number = add(str);
+    expect(number).toBe(6);
+  });
 });

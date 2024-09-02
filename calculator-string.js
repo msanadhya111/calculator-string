@@ -1,8 +1,11 @@
 export const add = (string) => {
     if (string === "") return 0;
-    let result = 0;
-    const values = string.split(",");
-    for (const value of values) {
-        result = result + +value;    }
-    return result;
+    const numArray = string
+    .split(/[,\n]/)
+    .map((str) => +str)
+    .filter((num) => !isNaN(num));
+    const result = numArray.reduce((acc, cur) => {
+        return acc + cur;
+    }, 0);
+    return result
   };
