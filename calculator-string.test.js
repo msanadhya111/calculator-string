@@ -15,4 +15,9 @@ describe("calculator-string", () => {
     const number = add(str);
     expect(number).toBe(18);
   });
+  test("string with two or more any type of positive number", () => {
+    const str = "5,6.2,7.2,4.3";
+    const number = add(str);
+    expect(number).toBe(22.7);
+  });
 });

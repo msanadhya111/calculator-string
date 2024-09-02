@@ -3,7 +3,6 @@ export const add = (string) => {
     let result = 0;
     const values = string.split(",");
     for (const value of values) {
-      result = result + parseInt(value);
-    }
+        result = result + +value;    }
     return result;
   };
