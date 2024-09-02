@@ -10,4 +10,9 @@ describe("calculator-string", () => {
     const number = add(str);
     expect(number).toBe(5);
   });
+  test("string with two or more number", () => {
+    const str = "5,6,7";
+    const number = add(str);
+    expect(number).toBe(18);
+  });
 });
