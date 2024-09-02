@@ -25,4 +25,9 @@ describe("calculator-string", () => {
     const number = add(str);
     expect(number).toBe(6);
   });
+  test("string that can support different delimeters", () => {
+    const str = "//;\n1;2";
+    const number = add(str);
+    expect(number).toBe(3);
+  });
 });
