@@ -30,4 +30,8 @@ describe("string-calculator", () => {
     const str = "//5,-7;-4,-2";
     expect(() => add(str).toThrow());
   });
+  test("show all negative numbers in error message", () => {
+    const str = "//5,-7;-4,-2";
+    expect(() => add(str).toThrow("negative numbers not allowed <-7,-4,-2>"));
+  });
 });

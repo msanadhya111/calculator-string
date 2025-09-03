@@ -23,6 +23,7 @@ export const add = (string) => {
     return acc + cur;
   }, 0);
 
-  if (negativeNumbers.length > 0) throw new Error();
+  if (negativeNumbers.length > 0)
+    throw new Error(`negative numbers not allowed ${negativeNumbers}`);
   return result;
 };
