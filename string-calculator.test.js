@@ -10,4 +10,8 @@ describe("string-calculator", () => {
     const number = add(str);
     expect(number).toBe(5);
   });
+  test("add two comma-separated numbers", () => {
+    const number = add("5,6");
+    expect(number).toBe(11);
+  });
 });
