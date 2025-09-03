@@ -14,4 +14,8 @@ describe("string-calculator", () => {
     const number = add("5,6");
     expect(number).toBe(11);
   });
+  test("multiple comma-separated numbers", () => {
+    const number = add("5,6,8,9,7");
+    expect(number).toBe(35);
+  });
 });

@@ -1,9 +1,7 @@
 export const add = (string) => {
   if (string === "") return 0;
 
-  if (string.length === 1) return +string;
-
-  const result = +string[0] + +string[2];
+  const result = string.split(",").reduce((sum, str) => sum + +str, 0);
 
   return result;
 };
