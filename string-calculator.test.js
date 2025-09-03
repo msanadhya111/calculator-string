@@ -26,4 +26,8 @@ describe("string-calculator", () => {
     const number = add("//;\n1;2");
     expect(number).toBe(3);
   });
+  test("throw error when negative numbers are passed", () => {
+    const str = "//5,-7;-4,-2";
+    expect(() => add(str).toThrow());
+  });
 });

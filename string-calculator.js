@@ -17,8 +17,12 @@ export const add = (string) => {
     .filter((str) => str.trim() !== "")
     .map((str) => parseFloat(str));
 
+  const negativeNumbers = [];
   const result = numbersArray.reduce((acc, cur) => {
+    if (cur < 0) negativeNumbers.push(cur);
     return acc + cur;
   }, 0);
+
+  if (negativeNumbers.length > 0) throw new Error();
   return result;
 };
