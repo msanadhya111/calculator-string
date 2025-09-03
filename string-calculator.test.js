@@ -18,4 +18,8 @@ describe("string-calculator", () => {
     const number = add("5,6,8,9,7");
     expect(number).toBe(35);
   });
+  test("support newline as delimiter", () => {
+    const number = add("1\n2,3");
+    expect(number).toBe(6);
+  });
 });
