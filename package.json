@@ -9,6 +9,7 @@
         "jest": "^29.7.0"
     },
     "scripts": {
+        "install": "npm install --save-dev jest babel-jest @babel/core @babel/preset-env",
         "test": "jest"
     }
 }
